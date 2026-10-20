@@ -1,0 +1,65 @@
+
+Execute Playwright all Test case
+    npx playwright test
+
+Execute Playwright tets cases in headed mode
+    npx playwright test --headed
+
+Execute Playwright tets cases in headed mode
+    npx playwright test --project=firefox --headed
+
+Execute particular SPEC file
+    npx playwright test .FolderName/fileName.Spec.ts
+    or npx playwright test fileName.Spec.ts
+
+Execute particular test file using partial or Exact description
+    npx playwright test -g "Test description Partial or Exact"
+
+
+Execute playwright test in test runner
+    npx playwright test --ui
+
+Execute playwright test in Trace
+    npx playwright test --trace on
+
+Debug playwright test with playwright inspector
+    npx playwright test --grep "Test Description" --debug
+
+Record and Play playwright test with playwright inspector
+    npx playwright codegen
+
+
+
+
+=========Auto wait in Playwright=============
+- action wait
+- exception wait.
+
+-- Wait for Element
+    await page.locator("").waitFor();
+    await page.waitForLocatoe("#Savebutton");
+
+-- Wait for Responce
+    await page.waitForResponce('**/products/*')
+
+-- wait for load State
+    await page.waitForLoadState('load | networkidle | attached')
+
+
+=========Allure Reporting=============
+step1 : Installl Allure Package
+    npm install --save-dev @playwright/test allure-playwright
+step1 : Installl allure-commandline package so it run in terminal 
+    npm install -g allure-commandline 
+Step3: Execute the test execute 
+STep4 : run the below command renerate the report
+    allure generate allure-results --clean
+Step5: OPen the report from below
+allure open
+
+
+
+
+
+
+
